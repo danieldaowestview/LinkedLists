@@ -1,14 +1,17 @@
 public class SinglyLinkedList {
 	Node head;
 	private int size;
+
 	public SinglyLinkedList() {
 		/* to be completed by student */
 		this.head = null;
 		this.size = 0;
 	}
+
 	public int size() {
 		return size;
 	}
+
 	public String toString() {
 		/* to be completed by student */
 		String result = "[";
@@ -23,11 +26,12 @@ public class SinglyLinkedList {
 		result += "]";
 		return result;
 	}
+
 	public Node remove(int n) {
 		/* to be completed by student */
-	//	if (n >= size || n < 0) {
-	//		throw new IndexOutOfBoundsException();
-	//	}
+		// if (n >= size || n < 0) {
+		// throw new IndexOutOfBoundsException();
+		// }
 		Node curr = head;
 		for (int i = 0; i < n - 1; i++) {
 			curr = curr.getNext();
@@ -38,16 +42,25 @@ public class SinglyLinkedList {
 		size--;
 		return node;
 	}///
+
 	public void add(Node n) {
 		/* to be completed by student */
 		size++;
 		Node curr = head;
 		if (head == null) {
 			head = n;
+		} else {
+			while (curr.getNext() != null) {
+				curr = curr.getNext();
+			}
+			curr.setNext(n);
 		}
-		while (curr.getNext() != null) {
-			curr = curr.getNext();
-		}
-		curr.setNext(n);
+	}
+	public Node get(int index){
+	    Node curr = head;
+        for(int i = 0; i < index; i++){
+            curr = curr.getNext();
+        }
+	    return curr;
 	}
 }
