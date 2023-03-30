@@ -21,7 +21,7 @@ class SinglyLinkedListTest {
 		l.add(n);
 		l.add(n1);
 		l.add(n2);
-		System.out.println("Testing size():Check if size is 3 after adding 3 variables -> " + l.toString());
+		System.out.println("Testing size():Check if size is 3 after adding 3 variables -> " + l.size());
 	}
 
 	@Test
@@ -34,9 +34,10 @@ class SinglyLinkedListTest {
 		data = 3;
 		Node n2 = new Node(data);
 		l.add(n);
-		l.add(n1);
-		l.add(n2);
-		System.out.println("Testing add(): Check if last element added was 3 -> " + l.toString());
+		//l.add(n1);
+		//l.add(n2);
+		System.out.println("Testing add(): Check if last element added was 1 -> " + l.toString());
+		System.out.println("Testing size():Check if size is 1 after adding 1 variable -> " + l.size());
 	}
 
 	@Test
