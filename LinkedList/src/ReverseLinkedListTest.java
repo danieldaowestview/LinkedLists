@@ -8,7 +8,7 @@ class ReverseLinkedListTest {
 	void test() {
 		fail("Not yet implemented");
 	}
-	
+	@Test
 	void testReverse() {
 		SinglyLinkedList l = new SinglyLinkedList();
 		int data = 1;
